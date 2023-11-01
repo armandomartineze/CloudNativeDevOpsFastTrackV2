@@ -1,7 +1,7 @@
 # OCI Cloud Native & DevOps FastTrack
-En este repositorio encontrará todo el material para el desarrollo de los Labs de este Fast Track!
+In this repository you will find all the material for the development of the Fast Track Labs!
 
-Laboratorios del Fast Track:
+Labs for the Fast Track:
 
 - [Lab. #1 - Resource Provisioning](/Lab.%20%231%20-%20Resource%20Provisioning)
 - [Lab. #2 - Developing Cloud Native Applications - Parte 1](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
@@ -10,6 +10,6 @@ Laboratorios del Fast Track:
 - [Lab. #5 Automating Deployment](/Lab.%20%235%20-%20Automating%20Deployment)
 - [Lab. #6 Operating Cloud Native Applications](/Lab.%20%236%20-%20Operating%20Cloud%20Native%20Applications)
 
-¡Aprovecha y consulta las certificaciones para Desarrolladores en OCI! 💻🚀
+¡Take advantage and check out the certifications for Developers in OCI! 💻🚀
 - 🏅 [OCI Developer Associate 2021](https://mylearn.oracle.com/learning-path/become-an-oci-developer-associate/35644/102197)
 - 🏅 [OCI DevOps Professional 2022](https://mylearn.oracle.com/learning-path/become-an-oci-devops-professional/35644/105156)
