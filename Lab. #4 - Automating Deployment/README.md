@@ -47,56 +47,56 @@ Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **
  ![](./Images/013-LAB4.png)
 
 
- 2. Clone o repositório do projeto.
+ 2. Clone the project repository.
 
  ```shell
  git clone https://github.com/CeInnovationTeam/BackendFTDev.git
  ```
 
- 3. No 🍔 menu de hambúrguer, acesse: **Developer Services** → **DevOps** → **Projects**.
+ 3. In the 🍔 hamburger menu, go to: **Developer Services** → **DevOps** → **Projects**.
   
  ![](./Images/014-LAB4.png)
 
- 4. Acesse o projeto listado (criado no provisionamento do Resource Manager 😄).
+ 4. Access the listed project (created when provisioning the Resource Manager 😄).
   
  ![](./Images/015-LAB4.png)
 
- 5. Na página do projeto, clique em **Create repository**.
+ 5. On the project page, click on **Create repository**.
 
  ![](./Images/016-LAB4.png)
 
- 6. Preencha o formulário da seguinte forma:
+ 6. Fill in the form as follows:
 
    - **Name:** ftRepo
-   - **Description:** (Defina uma descrição qualquer).
+   - **Description:** (Define any description).
    - **Default branch:** main
 
  ![](./Images/017-LAB4.png)
 
- 7. Na página do repositório recém-criado, clique em **HTTPS** e:
+ 7. On the newly created repository page, click on **HTTPS** and:
 
-- [1] Copie para o bloco de notas a informação do usuário a ser utilizado para trabalhar com o git (**Usuário Git**).
-- [2] Copie o comando git clone e o execute no Cloud Shell.
+- [1] Copy into notepad the information about the user to be used to work with git (**Git User**).
+- 2] Copy the git clone command and run it in the Cloud Shell.
 
  ![](./Images/018-LAB4.png)
 
- 8. No Cloud Shell, ao executar o comando, informe o **Usuario Git** recém-copiado, e o seu **Auth Token** como senha.
+ 8. In the Cloud Shell, when running the command, enter the newly copied **Git User** and your **Auth Token** as the password.
 
- 9. Neste momento, o Cloud Shell deve possuir dois novos diretórios:
+ 9. At this point, the Cloud Shell should have two new directories:
  - BackendFTDev
  - ftRepo
  
  ![](./Images/019-LAB4.png)
 
- 10. Execute os seguintes comandos para copiar o conteúdo do repositório **BackendFTDev**, para o repositório **ftRepo**.
+ 10. Run the following commands to copy the contents of the **BackendFTDev** repository to the **ftRepo** repository.
 
  ```shell
- git config --global user.email "<seu-email>"
- git config --global user.name "<seu-username>"
+ git config --global user.email "<your-email>"
+ git config --global user.name "<your-username>"
  cp -r BackendFTDev/* ftRepo/
  cd ftRepo
  git add -A
- git commit -m "Início do projeto"
+ git commit -m "Start of project"
  git push origin main
  ```
 
