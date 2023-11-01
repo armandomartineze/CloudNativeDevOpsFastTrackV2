@@ -16,7 +16,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  - - -
 
- ## <a name="PreReqs"></a> Pre Reqs: Coleta de informações relevantes ao processo
+ ## <a name="PreReqs"></a> Pre Reqs: Collecting information relevant to the process
 
  1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI. 
 
