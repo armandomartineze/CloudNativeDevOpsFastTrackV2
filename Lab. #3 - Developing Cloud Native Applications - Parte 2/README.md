@@ -14,6 +14,6 @@ This workshop was developed to demonstrate the functionalities of Oracle Cloud I
 
 ![](./Arquitetura.png)
 
-- LAB 01 - Preparing the Environment](./LAB01/README.md)
-- LAB 02 - Functions](./LAB02/README.md)
+- [LAB 01 - Preparing the Environment](./LAB01/README.md)
+- [LAB 02 - Functions](./LAB02/README.md)
 - [LAB 03 - Events](./LAB03/README.md)
