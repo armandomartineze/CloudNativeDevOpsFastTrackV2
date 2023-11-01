@@ -105,4 +105,3 @@
 
 [CONTINUE WITH LAB 3-------->](../LAB03/README.md)
 
-Translated with www.DeepL.com/Translator (free version)
