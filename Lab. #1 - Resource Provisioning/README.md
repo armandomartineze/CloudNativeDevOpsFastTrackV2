@@ -1,11 +1,11 @@
 # Lab. 1 - Resource Provisioning  
 
-Nesta etapa, você irá provisionar recursos dentro da OCI utilizando Terraform com o serviço **Resource Manager**!
+In this step, you will provision resources within the OCI Console using Terraform with the service **Resource Manager**!
 
-- 🌀 [Página oficial do Resource Manager](https://www.oracle.com/br/devops/resource-manager/)
-- 🧾 [Documentação do Resource Manager](https://docs.oracle.com/pt-br/iaas/Content/ResourceManager/home.htm)
+- 🌀 [Resource Manager official page](https://www.oracle.com/devops/resource-manager/)
+- 🧾 [Resource Manager Documentation](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/home.htm)
 
-Os recursos provisionados serão:
+The resources provisioned will be:
 
 - OKE
 - Artifact Registry
@@ -17,7 +17,7 @@ Os recursos provisionados serão:
 - Object Storage
 - Functions
 
-Juntamente com recursos de Rede e Gerenciamento como:
+Along with Network and Management features such as:
 
 - VCN
 - Subnets
@@ -27,72 +27,72 @@ Juntamente com recursos de Rede e Gerenciamento como:
 
 - - -
 
-## Pre-Reqs - Criação de compartimento
-Como pré-requisito, é uma boa ideia criarmos um compartimento isolado para poder agrupar nossos recursos!
+## Pre-Reqs - Creating a compartment
+As a prerequisite, it's a good idea to create an isolated compartment so that we can group our resources together!
 
-1. Para isso, faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI.
+1. To do this, do the [login](https://www.oracle.com/cloud/sign-in.html) in your OCI account.
 
-2. No 🍔 menu de hambúrguer, acesse: **Identity & Security** → **Identity** → **Compartments**.
+2. In the 🍔 hamburger menu, go to: **Identity & Security** → **Identity** → **Compartments**.
 
 ![](./images/IMG00_1.PNG)
 
-3. Na nova janela, clique em **Create Compartment**.
+3. In the new window, click on **Create Compartment**.
 
 ![](./images/IMG00_2.PNG)
 
-4. Insira um nome para o compartimento e também uma descrição. Feito isto, clique em **Create Compartment**.
+4. Enter a name for the compartment and also a description. Once this is done, click on **Create Compartment**.
 
 ![](./images/IMG00_3.PNG)
 
-Excelente!!! Podemos agora iniciar com os passos do nosso lab!
+Excellent!!! We can now start with our lab steps!
 
 - - -
 
-## Passo 1 - Download do repositório
+## Step 1 - Download the repository
 
-Como primeiro passo, devemos fazer o download do arquivo (zip) no repositório do github.
+The first step is to download the file (zip) from the github repository.
 
- 1. Para isso, acesse o [repositório](https://github.com/CeInnovationTeam/terraform-dev-ft) e clique em **Download ZIP**.
+ 1. To do this, go to [repositório](https://github.com/CeInnovationTeam/terraform-dev-ft) and click on **Download ZIP**.
   
 ![](./images/IMG01.PNG)
 
 - - -
 
-## Passo 2 - Upload do terraform no Resource Manager
+## Step 2 - Uploading the terraform to the Resource Manager
 
-1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI.
+1. Do the [login](https://www.oracle.com/cloud/sign-in.html) in your OCI account.
 
-2. No 🍔 menu de hambúrguer, acesse: **Developer Services** → **Resource Manager** → **Stacks**.
+2. In the 🍔 hamburger menu, go to: **Developer Services** → **Resource Manager** → **Stacks**.
 
 ![](./images/IMG04_01.PNG)
 
-3. Nesta nova janela, acesse o compartment criado previamente e clique em **Create Stack**.
+3. In this new window, access the previously created compartment and click on **Create Stack**.
 
 ![](./images/IMG05.PNG)
 
-4. Selecione a opção "Zip file", clique em "browse" e arraste o arquivo (.zip), que contém os arquivos .tf. O Resource Manager irá preencher todos os campos.
+4. Select the "Zip file" option, click on "browse" and drag the archive (.zip) containing the .tf files. Resource Manager will fill in all the fields.
 
 ![](./images/IMG06.PNG)
 
-5. Clique em **Next**, para podermos configurar alguns parâmetros sobre os recursos a serem provisionados.
+5. Click on **Next**, so that we can configure some parameters about the resources to be provisioned.
 
-6. Nesta nova tela, lembre-se de selecionar o compartment criado previamente e clicar em **Mostrar opções avançadas**.
+6. On this new screen, remember to select the previously created compartment and click on **Show advanced options**.
 
 ![](./images/IMG02.PNG)
 
-7. Antes de prosseguir, lembre-se de selecionar a versão "v1.25.4" na opção **Kubernetes Version**.
+7. Before proceeding, remember to select version "v1.25.4" in the option **Kubernetes Version**.
 
 ![](./images/IMG_OKE.png)
 
-8. Clique em **Next**.
+8. Click on **Next**.
 
-9. Criada nossa stack, clique em **Apply** e confirme a ação.
+9. Once our stack has been created, click on **Apply** and confirm the action.
 
 ![](./images/IMG07.PNG)
 
-10. O provisionamento dos recursos deverá durar em torno de 25 minutos.
+10. The provisioning of resources should take around 25 minutes.
 
-11. Após finalizar o Apply com sucesso, podemos conferir o provisionamento dos nossos recursos!
+11. After successfully completing the Apply, we can check the provisioning of our resources!
 
-### ✔ Ambientes provisionados com sucesso!!! Você provisionou recursos usando Terraform na OCI! 🚀
+### ✔ Environments successfully provisioned!!! You have provisioned resources using Terraform in OCI! 🚀
 
