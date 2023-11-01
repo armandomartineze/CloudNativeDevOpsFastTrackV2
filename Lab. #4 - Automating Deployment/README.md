@@ -1,12 +1,12 @@
 # Lab. #4 - Automating Deployment
 
-Nesta etapa, você construirá uma esteira de desenvolvimento, com o serviço **OCI DevOps**, que irá automatizar a entrega de uma aplicação conteinerizada a um cluster Kubernetes!
+In this step, you will build a development treadmill, with the **OCI DevOps** service, which will automate the delivery of a containerized application to a Kubernetes cluster!
 
-- 🌀 [Página oficial do OCI DevOps](https://www.oracle.com/br/devops/devops-service/)
-- 🧾 [Documentação do OCI DevOps](https://docs.oracle.com/pt-br/iaas/Content/devops/using/home.htm)
+- 🌀 [Official OCI DevOps page](https://www.oracle.com/br/devops/devops-service/)
+- 🧾 [OCI DevOps documentation](https://docs.oracle.com/pt-br/iaas/Content/devops/using/home.htm)
 
-**Você aprenderá todo o passo-a-passo dessa implementação:**
- - [Pre Reqs: Coleta de informações relevantes ao processo](#PreReqs)
+**You'll learn the entire step-by-step of this implementation.
+ - [Pre Reqs: Collecting information relevant to the process](#PreReqs)
  - [Passo 1: Clonar o repositório e movimentar conteúdo para repositório do projeto DevOps](#Passo1)
  - [Passo 2: Criar e configurar processo de Build (CI)](#Passo2)
  - [Passo 3: Criar e configurar entrega de artefatos (CI)](#Passo3)
