@@ -92,9 +92,9 @@ In this lab we will prepare the basic infrastructure for the workshop, where we 
 ![](./IMG/015-LAB1.PNG)
 
 
-[<--------RETORNAR](../README.md)         
+[<--------RETURN](../README.md)         
 
 
-[AVANÇAR-------->](../LAB02/README.md)
+[CONTINUE-------->](../LAB02/README.md)
 
 
