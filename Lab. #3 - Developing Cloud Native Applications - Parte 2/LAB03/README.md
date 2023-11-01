@@ -1,113 +1,114 @@
-﻿## Criando a Regra de Eventos e testando o funcionamento do fluxo
+﻿## Creating the Event Rule and testing how the flow works
 
-Nesse laboratório criaremos nossa regra que irá mapear eventos de criação em nosso object storage, e ativará a função que criamos no laboratório anterior.
-Para essa tarefa utilizaremos os seguintes recursos:
+In this lab we will create our rule that will map creation events in our object storage, and activate the function we created in the previous lab.
+For this task we will use the following resources:
  
  - **Oracle Events:** [https://docs.oracle.com/pt-br/iaas/Content/Events/Concepts/eventsoverview.htm](https://docs.oracle.com/pt-br/iaas/Content/Events/Concepts/eventsoverview.htm)
 
-#### Criando regra de evento
-1. Acesse o menu no canto superior esquerdo, em **Observability & Management**, clique em **Serviço Events** (Events Service).
+#### Creating an event rule
+1. Access the menu in the top left-hand corner, under **Observability & Management**, click on **Events Service**.
 
 ![](./IMG/001-LAB3.PNG)
 
-2. No canto esquerdo inferior verifique se o **compartimento** que você esta utilizando para esse laboratório esta selecionado.
+2. In the bottom left-hand corner, check that the **compartment** you are using for this lab is selected.
 
 ![](./IMG/002-LAB3.PNG)
 
-3. Clique em **Criar Regra** (Create Rule).
+3. Click on **Create Rule**.
 
 ![](./IMG/004-LAB3.PNG)
 
-4. Preencha o formulário de regra da seguinte forma:
-- Nome para Exibição: < Defina um nome para regra >
-- Descrição: < Defina uma descrição para a regra >
-- **Condições da Regra:**
-- Condição: "Tipo de Evento"
-- Nome do Serviço: "Object Storage"
-- Tipo de Evento: "Object Create"
+4. Fill in the rule form as follows:
+- Display Name: < Define a rule name >
+- Description: < Define a description for the rule >
+- Rule Conditions:**
+- Condition: "Event Type"
+- Service Name: "Object Storage"
+- Event Type: "Object Create"
 
 ![](./IMG/005-LAB3.PNG)
 
-- **Ações:**
-- Tipo de Ação: "Funções"
-- Compartimento da Função: < Selecione o compartimento da função criada no lab anterior>
-- Aplicativo de Função: < Selecione o aplicativo de função criado no lab anterior >
-- Função: "final-workshop"
+- Actions:**
+- Action Type: "Functions"
+- Function compartment: < Select the compartment of the function created in the previous lab>
+- Function Application: < Select the function application created in the previous lab>
+- Function: "final-workshop"
 
 ![](./IMG/006-LAB3.PNG)
 
-5. Clique em **Criar** (Create)
+5. Click on **Create**.
 
-#### Testando o funcionamento do fluxo
+#### Testing the flow
 
-Agora que temos o fluxo criado, podemos testar sua funcionalidade, para isso abriremos uma nova aba no navegador, onde acessaremos a nossa stream, e na nossa aba principal iremos fazer o teste de criação de um arquivo **.txt** em nosso bucket.
+Now that we have the flow created, we can test its functionality. To do this, we will open a new tab in the browser, where we will access our stream, and in our main tab we will test the creation of a **.txt** file in our bucket.
 
-##### Nova Aba
-1. Acesse a console da cloud: [https://www.oracle.com/cloud/sign-in.html](https://www.oracle.com/cloud/sign-in.html)
-2. Insira o nome da sua tenancy no campo de **Cloud Account Name**
-3. Clique no botão **Continue** para ir para a página de login.
-4. Insira seu usuario/senha e clique em **Sing In** *(Se o seu navegador já possui uma sessão ativa, esse passo provavelmente não será necessário)*
-5. No menu no canto esquerdo superior, em **Funções Analíticas e AI** (Analytics & AI), selecione Mensagens (Messaging)
+##### New Tab
+1. Access the cloud console: [https://www.oracle.com/cloud/sign-in.html](https://www.oracle.com/cloud/sign-in.html)
+2. Enter the name of your tenancy in the **Cloud Account Name** field.
+3. Click on the **Continue** button to go to the login page.
+4. Enter your username/password and click on **Sing In** *(If your browser already has an active session, this step probably won't be necessary)*
+5. In the menu in the top left-hand corner, under Analytics & AI, select Messaging.
 
 ![](./IMG/007-LAB3.PNG)
 
-6. No canto esquerdo inferior verifique se o **compartimento** que você esta utilizando para esse laboratório esta selecionado.
+6. In the bottom left-hand corner, check that the **compartment** you are using for this lab is selected.
 
 ![](./IMG/002-LAB3.PNG)
 
-7. Você observará que um **fluxo** (stream) já estará criado neste compartimento com o nome de **"workshop"** . *Este fluxo foi criado durante o primeiro laboratório, onde executamos o código de terraform através do resource manager*.
+7. You will notice that a stream has already been created in this compartment with the name **"workshop"** . *This stream was created during the first lab, where we ran the terraform code through the resource manager.
 
 ![](./IMG/008-LAB3.PNG)
 
-8. Selecione o fluxo **"workshop"**
-9. **Mantenha a aba aberta,** e volte para a aba principal do seu navegador
+8. Select the **"workshop"** flow
+9. **Keep the tab open,** and return to your browser's main tab.
 
- ##### Aba Principal
- 1. No menu no canto esquerdo superior, em **Armazenamento** (Storage), acesse **Buckets**
+ ##### Main Tab
+ 1. In the menu in the top left-hand corner, under **Storage**, go to **Buckets**
  
 ![](./IMG/009-LAB3.PNG)
 
- 2. No canto esquerdo inferior verifique se o **compartimento** que você esta utilizando para esse laboratório esta selecionado.
+ 2. In the bottom left-hand corner, check that the **compartment** you are using for this lab is selected.
  
 ![](./IMG/002-LAB3.PNG)
 
- 3. Você observará que um **Bucket** já estará criado neste compartimento com o nome de **"workshop_bucket"**.
+ 3. You will notice that a **Bucket** has already been created in this compartment with the name **"workshop_bucket"**.
  
 ![](./IMG/010-LAB3.PNG)
 
- 4. Selecione o bucket **"workshop_bucket"**.
- 5. A emissão de eventos a partir de um bucket é opcional, podendo ser habilitada ou desabilitada a qualquer momento.Valide se a **emissão de eventos** (Emit Object Events) está habilitada para este bucket.
+ 4. Select the **"workshop_bucket"** bucket.
+ 5. Emitting events from a bucket is optional and can be enabled or disabled at any time. Validate that **emission of events** (Emit Object Events) is enabled for this bucket.
  
 ![](./IMG/011-LAB3.PNG)
 
- 6. Estamos prontos para realizar o teste, mantenha a aba principal aberta.
+ 6. We're ready to run the test, keep the main tab open.
 
-##### Teste
+##### Test
 
-1. Crie um arquivo de formato **.txt** em seu computador local, com o conteúdo de sua preferência.  *(O formato .txt utf-8 não é obrigatório, porém todos os testes realizados nesse workshop foram considerando esse formato)*
+1. Create a **.txt** file on your local computer with the content of your choice.  *(The .txt utf-8 format is not mandatory, but all the tests carried out in this workshop have taken this format into account)*
 
 ![](./IMG/012-LAB3.PNG)
 
-2. Na sua **aba principal** ( Onde temos a página do Bucket "workshop_bucket" aberta ) clique em **Upload**.
+2. In your **main tab** (where we have the Bucket page "workshop_bucket" open) click on **Upload**.
 
 ![](./IMG/013-LAB3.PNG)
 
-3. No formulário de upload de objetos, clique em **selecionar arquivos** (select files)
+3. On the object upload form, click on **select files** (select files)
 
 ![](./IMG/014-LAB3.PNG)
 
-4. Selecione o arquivo **.txt** criado para este teste
-5. Clique em **Upload**
+4. Select the **.txt** file created for this test
+5. Click on **Upload**
 
 ![](./IMG/015-LAB3.PNG)
 
-6. **Aguarde o upload do arquivo**, e clique em **Fechar**(Close)
-7. **Na nova aba** ( Onde temos a página do fluxo "workshop" aberta) clique em **Carregar Mensagens**(Load Messages). 
+6. **Finish uploading the file and click Close.
+7. **In the new tab (where the workshop flow page is open) click on Load Messages. 
 
 ![](./IMG/016-LAB3.PNG)
 
-8. Não se preocupe caso nenhum item tenha sido encontrado, este processo pode levar algum tempo visto que é a primeira execução da função. Aguarde alguns segundos e tente  carregar as mensagens novamente se for necessário.
+8. Don't worry if no items have been found, this process can take some time as it's the first time the function is run. Wait a few seconds and try loading the messages again if necessary.
 
 ![](./IMG/017-LAB3.PNG)
 
-[<--------RETORNAR](../LAB02/README.md)
+[<--------RETURN TO LAB02](../LAB02/README.md)
+
