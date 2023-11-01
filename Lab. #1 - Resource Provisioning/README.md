@@ -52,7 +52,7 @@ Excellent!!! We can now start with our lab steps!
 
 The first step is to download the file (zip) from the github repository.
 
- 1. To do this, go to [repositório](https://github.com/CeInnovationTeam/terraform-dev-ft) and click on **Download ZIP**.
+ 1. To do this, go to the [repository](https://github.com/CeInnovationTeam/terraform-dev-ft) and click on **Download ZIP**.
   
 ![](./images/IMG01.PNG)
 
