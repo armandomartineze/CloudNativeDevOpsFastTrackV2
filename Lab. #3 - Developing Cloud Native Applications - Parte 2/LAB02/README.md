@@ -4,7 +4,7 @@
  For this task we will use the following resources:
  
  - **Oracle Functions:** [https://docs.oracle.com/pt-br/iaas/Content/Functions/Concepts/functionshowitworks.htm](https://docs.oracle.com/pt-br/iaas/Content/Functions/Concepts/functionshowitworks.htm)
- - Cloud Shell:** [https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/cloudshellintro.htm](https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/cloudshellintro.htm)
+ - **Cloud Shell:** [https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/cloudshellintro.htm](https://docs.oracle.com/pt-br/iaas/Content/API/Concepts/cloudshellintro.htm)
  
 
 #### Collecting Necessary Information
