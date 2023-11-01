@@ -18,7 +18,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  ## <a name="PreReqs"></a> Pre Reqs: Collecting information relevant to the process
 
- 1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI. Log in to your OCI account
+ 1. [Log in](https://www.oracle.com/cloud/sign-in.html) to your OCI account
 
  2. Realize os labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) e [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
 
