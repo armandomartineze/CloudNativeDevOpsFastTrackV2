@@ -20,13 +20,13 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  1. [Log in](https://www.oracle.com/cloud/sign-in.html) to your OCI account
 
- 2. Realize os labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) e [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
+ 2. Run the labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) and [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
 
- 3. No 🍔 menu hambúrguer, acesse: **Observability & Management** → **Application Performance** → **Administration**.
+ 3. Go to the 🍔 hamburger menu: **Observability & Management** → **Application Performance** → **Administration**.
 
  ![](./Images/005-LAB4.png)
 
- 4.  No canto esquerdo inferior, em **Scope**, valide se o **Comparment** criado no [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) está selecionado.
+ 4.  In the bottom left-hand corner, under **Scope**,validate **Comparment** created in [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) is selected.
 
  5. Selecione o domínio APM listado.
    
