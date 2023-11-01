@@ -7,7 +7,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
 **You'll learn the entire step-by-step of this implementation.
  - [Pre Reqs: Collecting information relevant to the process](#PreReqs)
- - [Passo 1: Clonar o repositório e movimentar conteúdo para repositório do projeto DevOps](#Passo1)
+ - [Step 1: Clone repository and move content to DevOps project repository](#Passo1)
  - [Passo 2: Criar e configurar processo de Build (CI)](#Passo2)
  - [Passo 3: Criar e configurar entrega de artefatos (CI)](#Passo3)
  - [Passo 4: Criar e configurar entrega de aplicação a cluster kubernetes (CD)](#Passo4)
@@ -26,21 +26,21 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  ![](./Images/005-LAB4.png)
 
- 4.  In the bottom left-hand corner, under **Scope**,validate **Comparment** created in [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) is selected.
+ 4. In the bottom left-hand corner, under **Scope**,validate **Comparment** created in [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) is selected.
 
- 5. Selecione o domínio APM listado.
+ 5. Select the APM domain listed.
    
  ![](./Images/007-LAB4.png)
 
- 6. Copie a chave privada do domínio para um bloco de notas.
+ 6. Copy the domain's private key into a notebook.
 
  ![](./Images/008_1-LAB4.PNG)
  
- É isso! Cumprimos todos os pré-requisitos para o laboratório!
-
+ That's it! We've fulfilled all the prerequisites for the lab!
+ 
  - - -
 
- ## <a name="Passo1"></a> Passo 1: Clonar o repositório e movimentar conteúdo para repositório do projeto DevOps
+ ## <a name="Passo1"></a> Step 1: Clone repository and move content to DevOps project repository
 
  1. Acesse o **Cloud Shell**, clicando no ícone como na imagem abaixo.
  
