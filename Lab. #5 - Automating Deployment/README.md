@@ -231,7 +231,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
 ## <a name="Passo4"></a> Step 4: Create and configure application delivery to Kubernetes cluster (CD)
 
-1. No **Cloud Shell**, para a criação do secret, execute os comandos abaixo e informe o seu User OCID e Auth Token, coletados anteriormente.
+1. In the **Cloud Shell**, to create the secret, run the commands below and enter your User OCID and Auth Token, collected previously.
 
  ```shell
   cd ftRepo/scripts/
@@ -239,27 +239,27 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
   ./create-secret.sh  
  ```
 
-2. Aguarde o final do fluxo.
+2. Wait for the end of the flow.
         
 ![](./Images/039-LAB4.png)
 
- 3. Retorne ao seu projeto DevOps clicando no 🍔 menu hamburguer e acessando: **Developer Services**  → **Projects**.
- 4. No canto esquerdo, selecione **Environments**.
+ 3. Return to your DevOps project by clicking on the 🍔 hamburger menu and accessing: **Developer Services**  → **Projects**.
+ 4. In the left-hand corner, select **Environments**.
          
 ![](./Images/040-LAB4.png)
 
- 5. Clique em **Create New Environment**.
+ 5. Click on **Create New Environment**.
 
- 6. Preencha o formulário como abaixo e clique em **Next**.
+ 6. Fill in the form below and click **Next**.
   - **Environment type**: Oracle Kubernetes Engine
   - **Name**: OKE
   - **Description**: OKE
 
- 7. Selecione o Cluster de Kubernetes, e clique em **Create Envrinoment**.
+ 7. Select the Kubernetes Cluster, and click on **Create Envrinoment**.
 
  ![](./Images/041-LAB4.png)
 
- 8. No canto esquerdo selecione **Artifacts** em seguida em **Add Artifact**.
+ 8. In the left-hand corner, select **Artifacts**, then **Add Artifact**.
           
 ![](./Images/042-LAB4.png)
 
