@@ -42,7 +42,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  ## <a name="Passo1"></a> Step 1: Clone repository and move content to DevOps project repository
 
- 1. Acesse o **Cloud Shell**, clicando no ícone como na imagem abaixo.
+ 1. Access the **Cloud Shell** by clicking on the icon as in the image below
  
  ![](./Images/013-LAB4.png)
 
@@ -100,74 +100,74 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
  git push origin main
  ```
 
-*Ao final do último comando o **Usuário git** e a senha (**Auth Token**) poderão ser solicitados novamente*.
+*At the end of the last command, the **Git user** and password (**Auth Token**) may be requested again*.
 
- ## <a name="Passo2"></a> Passo 2: Criar e configurar processo de Build (CI)
+ ## <a name="Passo2"></a> Step 2: Create and configure Build process (CI)
 
- 1. Retorne à página inicial do projeto DevOps.
- 2. Clique em **Create build pipeline**. 
+1. Return to the DevOps project home page.
+2. Click on **Create build pipeline**. 
 
  ![](./Images/020-LAB4.png)
 
- 3. Preencha o formulário da seguinte forma, e clique em **Create**:
+ 3. Fill in the form as follows and click on **Create**:
    - **Name**: build
    - **Description**: (Defina uma descrição qualquer).
 
  ![](./Images/021-LAB4.png)
 
- 4. Abra o pipeline de build recém-criado.
- 5. Na aba parâmetros, defina os seguintes parametros:
-  - APM_ENDPOINT: *Informação coletada nos pré requisitos*.
-  - APM_PVDATAKEY: *Informação coletada nos pré requisitos*.
+ 4. Open the newly created build pipeline.
+ 5. In the parameters tab, set the following parameters:
+  - APM_ENDPOINT: *Information collected in the pre-requisites*.
+  - APM_PVDATAKEY: *Information collected in the pre-requisites*.
   - APM_AGENT_URL: [🔗 copie este link](https://objectstorage.us-ashburn-1.oraclecloud.com/p/oMebVKw5USHnxjbrBWM9mKNYN-8MED6LKreiZ8fl_TgrtesUJ5PYI7hfqDngZRgr/n/id3kyspkytmr/b/bucket-devft-apm/o/apm-java-agent-installer-1.8.3326.jar)
 
-  **ATENÇÃO** - Ao inserir nome, valor e descrição, clique no sinal de "+" para que a informação fique salva.
+  **WARNING** - When entering the name, value and description, click on the "+" sign so that the information is saved.
   
  ![](./Images/022-LAB4.png)
 
- 6. Acesse a aba de **Build Pipeline**, e clique em **Add Stage**.
+ 6. Go to the **Build Pipeline** tab and click **Add Stage**.
 
  ![](./Images/023-LAB4.png)
 
- 7. Selecione a opção **Managed Build** e clique **Next**.
+ 7. Select the **Managed Build** option and click **Next**.
 
  ![](./Images/024-LAB4.png)
 
- 8. Preencha o formulário da seguinte forma:
+ 8. Fill in the form as follows:
 
-- **Stage Name**: Criacao de artefatos
-- **Description**: (Defina uma descrição qualquer).
-- **OCI build agent compute shape**: *Não alterar*.
-- **Base container image**: *Não alterar*.
-- **Build spec file path**: *Não alterar*.
+- **Stage Name**: Creating artifacts
+- **Description**: (Define any description).
+- **OCI build agent compute shape**: *Do not change*.
+- **Base container image**: *Do not change*.
+- **Build spec file path**: *Do not change*.
       
 ![](./Images/025-LAB4.png)
 
 
-9. Em Primary code repository, clique em **Select**, selecione as opções abaixo e clique em **Save**. 
+9. Under Primary code repository, click **Select**, select the options below and click **Save**.
 
 - **Source Connection type**: OCI Code Repository
 - **Repositório**: ftRepo
-- **Select Branch**: *Não alterar*
+- **Select Branch**: *Do not change*
 - **Build source name**: java_root
     
 ![](./Images/026-LAB4.png)
 
-- Feito isto, clique em **Add**.
+- Once this is done, click on **Add**.
 
 ![](./Images/025_1-LAB4.png)
 
-🤔 Neste momento é importante entender a forma como a ferramenta trabalha 📝.
+🤔 At this point it is important to understand how the tool works 📝.
     
-- A ferramenta utiliza um documento no formato YAML para definir os passos que devem ser executados durante o processo de construção da aplicação.
-- Por padrão este documento é chamado de *build_spec.yaml* e deve ser configurado previamente de acordo com as necessidades da aplicação.
-- Os passos serão então executados por uma instância temporária (agent), que será provisionada no início de cada execução e destruída ao final do processo.
-- 🧾 [Documentação de como formatar o documento de build](https://docs.oracle.com/pt-br/iaas/Content/devops/using/build_specs.htm)
-- 📑 [Documento utilizado neste workshop (build_spec.yaml)](https://raw.githubusercontent.com/CeInnovationTeam/BackendFTDev/main/build_spec.yaml)
+- The tool uses a document in YAML format to define the steps that must be carried out during the process of building the application.
+- By default, this document is called *build_spec.yaml* and must be configured in advance according to the application's needs.
+- The steps will then be executed by a temporary instance (agent), which will be provisioned at the start of each execution and destroyed at the end of the process.
+- 🧾 [Documentation on how to format the build document](https://docs.oracle.com/pt-br/iaas/Content/devops/using/build_specs.htm)
+- 📑 [Document used in this workshop (build_spec.yaml)](https://raw.githubusercontent.com/CeInnovationTeam/BackendFTDev/main/build_spec.yaml)
 
- ## <a name="Passo3"></a> Passo 3: Criar e configurar entrega de artefatos (CI)
+ ## <a name="Passo3"></a> Step 3: Create and configure artifact delivery (CI)
 
- 1. Na aba de Build Pipeline, clique no sinal de **"+"**, abaixo do stage **Criacao de artefatos**, e em **Add Stage**.
+ 1. In the Build Pipeline tab, click on the **"+"** sign below the **Artifact Creation** stage and on **Add Stage**.
      
 ![](./Images/027-LAB4.png)
 
