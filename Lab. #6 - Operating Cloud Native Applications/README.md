@@ -1,90 +1,90 @@
-# Lab. #5 - Operating Cloud Native Applications
+# Lab. #6 - Operating Cloud Native Applications
 
-Olá, neste laboratório você aprenderá como registrar, monitorar e analisar os logs da infraestrutura Compute de OCI que você provisionou nos laboratórios anteriotes utilizando a **Oracle Cloud Observability and Management Platform**!
+Hello, in this lab you will learn how to record, monitor and analyze the logs of the OCI Compute infrastructure that you provisioned in the previous labs using the **Oracle Cloud Observability and Management Platform**!
 
-- 🌀 [Página oficial do OCI Observability and Management Platform](https://www.oracle.com/br/manageability/)
-- 🧾 [Documentação do OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
-- 🧾 [Documentação do OCI Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
+- 🌀 [Official website of OCI Observability and Management Platform](https://www.oracle.com/manageability/)
+- 🧾 [Documentation for OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
+- 🧾 [Documentation for OCI Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
 
-**A seguir você aprenderá o passo-a-passo desta configuração:**
+**Here's a step-by-step guide to setting this up:**
 
-- [Pre Reqs: Logar na sua conta OCI](#PreReqs)
-- [Passo 1: Ativar o serviço de Logging e habilitar a coleta dos Logs](#Passo1)
-- [Passo 2: Ativar o serviço de Logging Analytics e criar um grupo para os Logs](#Passo2)
-- [Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics](#Passo3)
-- [Passo 4: Configurar queries customizadas e criar um dashboard](#Passo4)
+- [Pre Reqs: Log in to your OCI account](#PreReqs)
+- [Step 1: Activate the Logging service and enable log collection](#Step1)
+- [Step 2: Activate the Logging Analytics service and create a group for the Logs](#Step2)
+- [Step 3: Create the Service Connector to replicate the Logging logs to Logging Analytics](#Step3)
+- [Step 4: Configure customized queries and create a dashboard](#Step4)
 
 - - -
 
-## <a name="PreReqs"></a> Pre Reqs: Criar Canal no Slack e logar na sua conta OCI
+## <a name="PreReqs"></a> Pre Reqs: Create a Slack channel and log in with your OCI account
 
- 1. Faça o [login](https://www.oracle.com/cloud/sign-in.html) em sua conta na OCI;
- 2. Execute o [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), caso não o tenha executado anteriormente;
+ 1. Do the [login](https://www.oracle.com/cloud/sign-in.html) in your OCI account;
+ 2. Run the [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning), if you haven't run it before;
 
 ---
 
-## <a name="Passo1"></a> Passo 1: Ativar o serviço de Logging e habilitar a coleta dos Logs
+## <a name="Step1"></a> Step 1: Activate the Logging service and enable log collection
 
-1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging**:
+1. In the 🍔 hamburger menu, go to: **Observability and Management Platform** → **Logging**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
-2. No menu à esquerda **Logging** clique em **Logs** e em seguida no botão à direita **Enable service log**:
+2. In the **Logging** menu on the left, click on **Logs** and then on the button on the right **Enable service log**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-3.png?raw=true)
-3. Escolha em **Service** o item *Virtual Cloud Network* e em **Resource** selecione a subnet pública criada anteriormete. Em **Log Category** selecione a opção de *Flow Logs* e em **Log Name** digite o nome *Flowlogs-VCN*. Depois em Log Location clique em **Show Advanced Options** e clique em **Create New Group** para criar um novo grupo:
+3. Under **Service** choose the item *Virtual Cloud Network* and under **Resource** select the public subnet created earlier. In **Log Category** select the *Flow Logs* option and in **Log Name** enter the name *Flowlogs-VCN*. Then in Log Location click on **Show Advanced Options** and click on **Create New Group** to create a new group:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-4.png?raw=true)
-4. Na tela de criação de grupo de log em **Name** digite o nome do grupo *LogGroupFlow* e clique no botão **Create**:
+4. On the log group creation screen, in **Name** enter the group name *LogGroupFlow* and click on the **Create** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-5.png?raw=true)
-5. Deixe selecionado o *LogGroupFlow* como **Log Group** e clique no botão **Enable Log** para habilitar a configuração:
+5. Leave *LogGroupFlow* selected as **Log Group** and click on the **Enable Log** button to enable the configuration:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-6.png?raw=true)
-6. Após a ativação (2-3 min), inicia-se a coleta de logs (5-6 min). Para visualizar no menu à esquerda **Logging** clique em **Logs** e depois clique no Log Name que acabamos de criar **Flowlogs-VCN**:
+6. After activation (2-3 min), log collection begins (5-6 min). To view **Logging**, click on **Logs** in the left-hand menu and then click on the Log Name we just created **Flowlogs-VCN**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
-7. Você vizualizará o dashboard de coleta de logs da VCN escolhida. Clique em **Explore with Log Search** à direita para:
+7. You will see the log collection dashboard for the chosen VCN. Click on **Explore with Log Search** on the right to:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
-8. Pronto! A pardir de agora você pode modificar as buscar para filtrar o log desejado.
+8. Done! From now on you can modify the searches to filter out the log you want.
 
-> Dica: Mude a vialização para **Visualize** e divirta-se!
+> Tip: Change the visualization to **Visualize** and have fun!
 
 
 ---
 
-## <a name="Passo2"></a> Passo 2: Ativar o serviço de Logging Analytics e criar um grupo para os Logs
+## <a name="Step2"></a> Step 2: Activate the Logging Analytics service and create a group for the Logs
 
-1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Logging Analytics** :
+1. Go to the 🍔 hamburger menu: **Observability and Management Platform** → **Logging Analytics** :
 ![](https://github.com/ladan19/images-lp/blob/main/photo-10.png?raw=true)
-2. Ative o clicando no botão **Start Using Logging Analytics**:
+2. Activate by clicking on the **Start Using Logging Analytics**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-11.png?raw=true)
-3. Após a inicialização, clique no botão **Take me to Log Explorer**:
+3. After initialization, click on the **Take me to Log Explorer**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-12.png?raw=true)
 
-> Dica: Repare que o serviço já cria algumas poíticas e um grupo de log *Default*.
+> Tip: Notice that the service already creates some policies and a *Default* log group.
 
-5. Na console de Log Explorer no menu superior à esquerda clique e selecione **Administration**:
+5. In the Log Explorer console in the top menu on the left, click and select **Administration**:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image02.png?raw=true)
-6. Agora clique em **Log Groups** no menu **Resources** e em seguida no botão **Create Log Group**, para criarmos um novo grupo de log:
+6. Now click on **Log Groups** in the **Resources** menu and then on the **Create Log Group** button to create a new log group:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-13.png?raw=true)
 ![](https://github.com/ladan19/images-lp/blob/main/photo-14.png?raw=true)
-7. Na console de criação de grupo de Log em **Name** digite o nome do grupo *LogGroupVCN* e depois clique no botão **Create**:
+7. In the Log group creation console, in **Name** enter the group name *LogGroupVCN* and then click the **Create** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo15.png?raw=true)
 
 ---
 
-## <a name="Passo3"></a> Passo 3: Criar o Service Connector para replicar os logs do Logging para o Logging Analytics
+## <a name="Step3"></a> Step 3: Create the Service Connector to replicate the Logging logs to Logging Analytics
 
-1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Service Connectors**:
+1. In the 🍔 hamburger menu, go to: **Observability and Management Platform** → **Service Connectors**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-16.png?raw=true)
-3. Na console de *Service Connectors* clique no botão **Create Service Connector**:
+3. In the *Service Connectors* console, click on the **Create Service Connector** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image03.png?raw=true)
-1. Em **Connector Name** digite *LogVCNConnector*, em **Configure Source** selecione *Logging* e em **Target** selecione *Logging Analytcs*. Na parte de *Configure Source* selecione em **Log Group** o *LogGroupFlow* e em **Logs** selecione o *FlowLogs-VCN* criados anteriosmente:
+1. In **Connector Name** enter *LogVCNConnector*, in **Configure Source** select *Logging* and in **Target** select *Logging Analytics*. In the *Configure Source* section, in **Log Group** select *LogGroupFlow* and in **Logs** select the *FlowLogs-VCN* created earlier:
 ![](https://github.com/ladan19/images-lp/blob/main/photo17.png?raw=true)
-1. Em **Configuration Target** selecione o **Log Group** *LogGroupVCN* e (Muito Importante :warning:) clique no botão **Create** à direita _para criar as políticas para o conector tenha permissão de escrita_. Após isso clique no botão **Create** no canto inferior à esquerda para criar o conector:
+1. Under **Configuration Target** select the **Log Group** *LogGroupVCN* and (Very Important :warning:) click on the **Create** button on the right _to create the policies for the connector to have write permission_. Then click on the **Create** button at the bottom left to create the connector:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-18.png?raw=true)
 
 ---
 
-## <a name="Passo4"></a> Passo 4: Configurar queries customizadas e criar um dashboard
+## <a name="Step4"></a> Step 4: Configure customized queries and create a dashboard
 
-1. No 🍔 menu de hambúrguer, acesse: **Observability and Management Platform** → **Log Explorer**:
+1. In the 🍔 hamburger menu, go to: **Observability and Management Platform** → **Log Explorer**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-19png.png?raw=true)
-2. Na console **Log Explorer** substitua a query existente pela query abaixo para buscar os IPs de origem que estão acessando a VCN que configuramos e clique no botão **Run**:
+2. In the **Log Explorer** console, replace the existing query with the query below to search for the source IPs that are accessing the VCN we have configured and click on the **Run** button:
 
 ```sh
 'Log Source' = 'OCI VCN Flow Unified Schema Logs' | stats count as logrecords by 'Source IP'
@@ -92,11 +92,11 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ![](https://github.com/ladan19/images-lp/blob/main/photo-21.png?raw=true)
 
-> Dica: Caso não apareça a mensagem *No data has been ingested* no **Log Explorer**, clique no menu à esquerda que está escrito **Logging Analytics** → **Home** e clique na imagem **VCN Flow Logs**.
+> Tip: If the message *No data has been ingested* does not appear in the **Log Explorer**, click on the menu on the left that says **Logging Analytics** → **Home** and click on the image **VCN Flow Logs**.
 
-3. Salvaremos o resultado da query para utilizarmos na criação do nosso dashboard a seguir. Clique em **Actions** no menu à direita e em **Save**, digite *Ips de Entrada* em **Search Name** e clique no botão **Save**:
+3. We'll save the result of the query for use in creating our dashboard next. Click on **Actions** in the menu on the right and then on **Save**, type *Input Ips* in **Search Name** and click on the **Save** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image06.png?raw=true)
-4. Configure outra query customizada para saber o volume do tráfego de saída da VCN. substitua a query existente pela query abaixo, troque a visualização para gráfico de **Line** e clique no botão **Run**:
+4. Set up another custom query to find out the volume of outgoing traffic from the VCN. replace the existing query with the one below, change the display to a **Line** graph and click on the **Run** button:
 
 ```sh
 'Log Source' = 'OCI VCN Flow Unified Schema Logs' | timestats avg('Content Size Out') as 'Outbound Traffic'
@@ -104,28 +104,28 @@ Olá, neste laboratório você aprenderá como registrar, monitorar e analisar o
 
 ![](https://github.com/ladan19/images-lp/blob/main/photo-23.png?raw=true)
 
-5. Clique em **Actions** no menu à direita e em **Save as...**, digite *Tráfego de Saída* em **Search Name** e clique no botão **Save**:
+5. Click on **Actions** in the menu on the right and under **Save as...**, type *Outgoing Traffic* in **Search Name** and click on the **Save** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image05.png?raw=true)
 
-> Dica: Utilizar **Save as..** ao invés de **Save** para conseguir salvar o resultado com um novo nome.
+> Tip: Use **Save as..** instead of **Save** to be able to save the result under a new name.
 
-6. No menu ao lado esquerdo superior selecione **Dashboard**:
+6. Select **Dashboard** from the menu on the top left:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-26.png?raw=true)
-7. Na console de **Dashboard** clique no botão **Create Dashboard**:
+7. In the **Dashboard** console, click on the **Create Dashboard** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-27.png?raw=true)
-8. Na console de criação do dashboard, selecione o compartement em **Widget Compartment** e arraste e solte o widget **Ips de Entrada**:
+8. In the dashboard creation console, select the compartment under **Widget Compartment** and drag and drop the **Input Ips** widget:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-28.png?raw=true)
-10. Após arrastar o widget, será solicitado a criação do filtro. Adicionaremos um novo filtro, deixe a seleção **Log Group Compartment** e clique no botão **Save Changes**:
+10. After dragging the widget, you will be asked to create a filter. We'll add a new filter, leave the **Log Group Compartment** selection and click on the **Save Changes** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image07.png?raw=true)
-11. Para a configuração da **Entity**, deixe a seleção *Entity* e clique no botão **Save Changes**:
+11. For the **Entity** configuration, leave the *Entity* selection and click on the **Save Changes** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image08.png?raw=true)
-12. O widget será adicionado ao dashboard dessa maneira:
+12. The widget will be added to the dashboard in this way:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-30.png?raw=true)
-13. Realize o mesmo processo realizado anterioemnte clicando na aba **Add widget** para o widget **Tráfego de Saída**:
+13. Carry out the same process as before by clicking on the **Add widget** tab for the **Outgoing Traffic** widget:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-31.png?raw=true)
-14. Modifique no nome dashboard clicando no ícone **Pencil**, digite *VCN Dashboard* e tecle enter para salvar o nome. Após isso selecione a aba **About**, selecione um compartment e clique no botão **Save Changes**:
+14. Change the dashboard name by clicking on the **Pencil** icon, type *VCN Dashboard* and hit enter to save the name. Then select the **About** tab, select a compartment and click on the **Save Changes** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-33.png?raw=true)
 
 ---
 
-### 👏🏻 Parabéns!!! Você foi capaz de configurar com sucesso um pipeline completo de **Logging** e **Logging Analytics** em OCI! 🚀
+### 👏🏻 Congratulations!!! You have successfully set up a complete **Logging** and **Logging Analytics** pipeline in OCI! 🚀
