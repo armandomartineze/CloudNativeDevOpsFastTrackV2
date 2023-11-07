@@ -319,9 +319,9 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
   ![](./Images/053-LAB4.png)
 
-  3. Preencha o formulário como abaixo e clique em **Create**.
-  - **Name**: Inicio
-  - **Description**: (Defina uma descrição qualquer).
+  3. Fill in the form as below and click on **Create**.
+  - **Name**: Home
+  - **Description**: (Define any description).
   - **Source connection**: OCI Code Repository
   - **Select code repository**: ftRepo
   - **Actions**: Add Action
@@ -331,50 +331,50 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
 ![](./Images/054-LAB4.png)
 
-*A partir desse momento, qualquer novo push feito no repositório do projeto iniciará o pipeline de build criado nesse workshop*.
+*From this moment on, any new push made to the project repository will start the build pipeline created in this workshop*.
 
-4. Retorne à configuração do pipeline de build do projeto selecionando **Build Pipelines** → **build**.
+4. Return to the project's build pipeline configuration by selecting **Build Pipelines** → **build**.
 
 ![](./Images/055-LAB4.png)
 
-  5. Na aba de Build Pipeline, clique no sinal de **"+"** abaixo do stage **Entrega de Imagem de Container** e clique em **Add Stage**.
+  5. In the Build Pipeline tab, click on the **"+"** sign below the **Container Image Delivery** stage and click **Add Stage**.
 
 ![](./Images/056-LAB4.png)
 
-6. Selecione o item de **Trigger Deployment**, e clique em **Next**.
+6. Select the **Trigger Deployment** item and click **Next**.
 
 ![](./Images/057-LAB4.png)
 
-7. Preencha o formulário como abaixo e clique em **Add**.
-- **Nome**: Inicio de Deployment
-- **Description**: (Defina uma descrição qualquer).
+7. Fill in the form as below and click **Add**.
+- **Name**: Start of Deployment
+- **Description**: (Define any description).
 - **Select deployment pipeline**: deploy
 
-*Mantenha os demais campos sem alteração*.
+*Keep the other fields unchanged*.
 
 ![](./Images/058-LAB4.png)
 
-Parabéns por chegar até aqui!! Nosso pipeline já está pronto! No próximo passo iremos validar o projeto, checando se está tudo ok.
+Congratulations on getting this far! Our pipeline is ready! In the next step we will validate the project, checking that everything is OK.
 
- ## <a name="Passo6"></a> Passo 6: Execução e testes
-  1.  Retorne ao projeto clicando no 🍔 menu hambúrguer e acessando: **Developer Services**  → **Projects**.
-  2.  Retorne à configuração do pipeline de build do projeto selecionando **Build Pipelines** → **build**.
+ ## <a name="Passo6"></a> Step 6: Execution and testing
+  1.  Return to the project by clicking on the 🍔 hamburger menu and accessing: **Developer Services** → **Projects**.
+  2.  Return to the project's build pipeline configuration by selecting **Build Pipelines** → **build**.
   
   ![](./Images/055-LAB4.png)
 
-  3. No canto direito superior, selecione **Start Manual Run**.
+  3. In the top right-hand corner, select **Start Manual Run**.
 
 ![](./Images/055_1-LAB4.png)
 
-  4. Mantenha as informações do formulário padrão, e clique em **Start Manual Run**.
-  5. Aguarde a execução do fluxo.
-  6. Acesse novamente o Cloud Shell e execute o comando abaixo.
+  4. Keep the information from the standard form, and click on **Start Manual Run**.
+  5. Wait for the flow to run.
+  6. Access the Cloud Shell again and run the following command.
 
   ```shell
   kubectl get svc
   ```
 
-  7. Copie a informação de EXTERNAL-IP do serviço _svc-java-app_ assim que estiver disponível.
+  7. Copy the EXTERNAL-IP information from the _svc-java-app_ service as soon as it is available.
 
 ```shell
 NAME           TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)          AGE
@@ -383,7 +383,7 @@ svc-app        LoadBalancer   10.96.252.115   <svc-app-ip>   80:31159/TCP     29
 svc-java-app   LoadBalancer   10.96.16.229    <EXTERNAL-IP>   8081:32344/TCP   103m
 ```
 
-  8. No **Cloud Shell**, execute o comando abaixo substituindo a informação de `<EXTERNAL-IP>` pelo IP copiado.
+  8. In the **Cloud Shell**, run the command below replacing the `<EXTERNAL-IP>` information with the copied IP.
 
    ```shell
   curl --location --request POST '<EXTERNAL-IP>:8081/processcart' \
@@ -403,8 +403,8 @@ svc-java-app   LoadBalancer   10.96.16.229    <EXTERNAL-IP>   8081:32344/TCP   1
       }
 ]'
 ```
-- Você deverá visualizar como resposta a soma dos preços dos produtos! Experimente modificar os valores para checar a soma!
+- You should see the sum of the product prices! Try changing the values to check the sum!
 
 ![](./Images/059-LAB4.png)
 
-### 👏🏻 Parabéns!!! Você foi capaz de construir com sucesso um pipeline completo de **DevOps** na OCI! 🚀
+### 👏🏻 Congratulations!!! You were able to successfully build a complete pipeline of **DevOps** in OCI! 🚀
