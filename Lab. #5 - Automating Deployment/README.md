@@ -263,59 +263,59 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
           
 ![](./Images/042-LAB4.png)
 
- 9. Preencha o formulario como abaixo e clique em **Add**.
+ 9. Fill in the form below and click **Add**.
  - **Name**: deployment.yaml
  - **Type**: Kubernetes manifest
  - **Artifact Source**: Inline
- - **Value**: Cole o conteúdo do arquivo https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
- *Não altere a identação (espaços) do documento, pois isso pode quebrá-lo*.
+ - **Value**: Paste the contents of the file https://github.com/CeInnovationTeam/BackendFTDev/blob/main/scripts/deployment.yaml
+ *Do not change the indentation (spaces) of the document, as this can break it*.
  - **Replace parameters used in this artifact**: Yes, substitute placeholders
           
 ![](./Images/043_0-LAB4.png)
 
- 10. No canto esquerdo, selecione **Deployment Pipelines** e, em seguida, clique em **Create Pipeline**.
+ 10. In the left-hand corner, select **Deployment Pipelines** and then click **Create Pipeline**.
           
 ![](./Images/044-LAB4.png)
 
- 11. Preencha o formulário como abaixo e clique em **Create pipeline**.
+ 11. Fill in the form as below and click on **Create pipeline**.
  - **Pipeline name**: deploy
- - **Description**: (Defina uma descrição qualquer).
+ - **Description**: (Define any description).
           
 ![](./Images/048-LAB4.png)
 
- 12. Na Aba de **Parameters** configure o seguinte parâmetro:
+ 12. In the **Parameters** Tab, set the following parameter:
  
  - REGISTRY_REGION: `<código-de-região>`.ocir.io  
           
 ![](./Images/049-LAB4.png)
 
- 13. Retorne à aba de **Pipeline** e clique em **Add Stage**.
+ 13. Return to the **Pipeline** tab and click on **Add Stage**.
           
 ![](./Images/050-LAB4.png)
 
- 14. Selecione a Opção **Apply Manifest to your Kubernetes Cluster** e clique em **Next**.
+ 14. Select the option **Apply Manifest to your Kubernetes Cluster** and click **Next**.
           
 ![](./Images/051-LAB4.png)
 
- 15. Preencha o formulário da seguinte forma:
- - **Name**: Deployment da Aplicacao
- - **Description**: (Defina uma Descrição qualquer).
+ 15. Fill in the form as follows:
+ - **Name**: Application Deployment
+ - **Description**: (Define any description).
  - **Environment**: OKE
 
 ![](./Images/052_0-LAB4.png)
 
-16. Clique em **Select Artifact**, e selecione **deployment.yaml**.
+16. Click on **Select Artifact**, and select **deployment.yaml**.
 
 ![](./Images/052_1-LAB4.png)
 
-17. Feito isto, clique em **Add**.
+17. Once this is done, click on **Add**.
  
- Com isso finalizamos a parte de Deployment (CD) do nosso projeto! No passo a seguir vamos conectar ambos os pipelines, e definir um gatilho (trigger) para que o processo automatizado se inicie!
+ That concludes the Deployment (CD) part of our project! In the next step, we'll connect both pipelines and define a trigger to start the automated process!
 
- ## <a name="Passo5"></a> Passo 5: Configurar gatilho do fluxo e conectar pipelines de CI/CD
+ ## <a name="Passo5"></a> Step 5: Configure flow trigger and connect CI/CD pipelines
 
-  1. Retorne ao projeto clicando no 🍔 menu hambúrguer e acessando: **Developer Services**  → **Projects**.
-  2. No canto esquerdo selecione **Triggers**, e em seguida clique em **Create Trigger**.
+  1. Return to the project by clicking on the 🍔 hamburger menu and accessing: **Developer Services** → **Projects**.
+  2. In the left-hand corner, select **Triggers**, then click on **Create Trigger**.
 
   ![](./Images/053-LAB4.png)
 
