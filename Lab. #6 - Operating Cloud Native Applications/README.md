@@ -25,21 +25,29 @@ Hello, in this lab you will learn how to record, monitor and analyze the logs of
 
 ## <a name="Step1"></a> Step 1: Activate the Logging service and enable log collection
 
-1. In the 🍔 hamburger menu, go to: **Observability and Management Platform** → **Logging**:
+1. In the 🍔 hamburger menu, go to: **Networking** → **Capture Filters**:
+![](images/captureFilters.png)
+2. In the **Capture Filters** page, click on **Create capture filter**:
+![](images/createCaptureFilter.png)
+3. Choose the correct compartment, select **Flow log capture filter** and select **10%** of **Sampling Rate**:
+![](images/1CreateCFilter.png)
+4. Do not change anything form the **Rules** section and click in the **Create capture filter** button
+![](images/2CreateCFilter.png) 
+5. In the 🍔 hamburger menu, go to: **Observability and Management Platform** → **Logging**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
-2. In the **Logging** menu on the left, click on **Logs** and then on the button on the right **Enable service log**:
+6. In the **Logging** menu on the left, click on **Logs** and then on the button on the right **Enable service log**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-3.png?raw=true)
-3. Under **Service** choose the item *Virtual Cloud Network* and under **Resource** select the public subnet created earlier. In **Log Category** select the *Flow Logs* option and in **Log Name** enter the name *Flowlogs-VCN*. Then in Log Location click on **Show Advanced Options** and click on **Create New Group** to create a new group:
+7. Under **Service** choose the item *Virtual Cloud Network* and under **Resource** select the public subnet created earlier. In **Log Category** select the *Flow Logs* option and in **Log Name** enter the name *Flowlogs-VCN*. Then in Log Location click on **Show Advanced Options** and click on **Create New Group** to create a new group:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-4.png?raw=true)
-4. On the log group creation screen, in **Name** enter the group name *LogGroupFlow* and click on the **Create** button:
+8. On the log group creation screen, in **Name** enter the group name *LogGroupFlow* and click on the **Create** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-5.png?raw=true)
-5. Leave *LogGroupFlow* selected as **Log Group** and click on the **Enable Log** button to enable the configuration:
+9. Leave *LogGroupFlow* selected as **Log Group** and click on the **Enable Log** button to enable the configuration:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-6.png?raw=true)
-6. After activation (2-3 min), log collection begins (5-6 min). To view **Logging**, click on **Logs** in the left-hand menu and then click on the Log Name we just created **Flowlogs-VCN**:
+10. After activation (2-3 min), log collection begins (5-6 min). To view **Logging**, click on **Logs** in the left-hand menu and then click on the Log Name we just created **Flowlogs-VCN**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
-7. You will see the log collection dashboard for the chosen VCN. Click on **Explore with Log Search** on the right to:
+11. You will see the log collection dashboard for the chosen VCN. Click on **Explore with Log Search** on the right to:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
-8. Done! From now on you can modify the searches to filter out the log you want.
+12. Done! From now on you can modify the searches to filter out the log you want.
 
 > Tip: Change the visualization to **Visualize** and have fun!
 
@@ -92,7 +100,7 @@ Hello, in this lab you will learn how to record, monitor and analyze the logs of
 
 ![](https://github.com/ladan19/images-lp/blob/main/photo-21.png?raw=true)
 
-> Tip: If the message *No data has been ingested* does not appear in the **Log Explorer**, click on the menu on the left that says **Logging Analytics** → **Home** and click on the image **VCN Flow Logs**.
+> Tip: If the message *No data has been ingested* appear in the **Log Explorer**, give it some time to collect data and refresh the page.
 
 3. We'll save the result of the query for use in creating our dashboard next. Click on **Actions** in the menu on the right and then on **Save**, type *Input Ips* in **Search Name** and click on the **Save** button:
 ![](https://github.com/CeInnovationTeam/OCI-FastTrack-Developer-LINUXtips/blob/main/Lab.%20%235%20-%20Operating%20Cloud%20Native%20Applications/images/Image06.png?raw=true)
