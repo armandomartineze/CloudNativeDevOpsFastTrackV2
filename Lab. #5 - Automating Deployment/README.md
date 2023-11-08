@@ -111,7 +111,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  3. Fill in the form as follows and click on **Create**:
    - **Name**: build
-   - **Description**: (Defina uma descrição qualquer).
+   - **Description**: (Description).
 
  ![](./Images/021-LAB4.png)
 
@@ -119,7 +119,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
  5. In the parameters tab, set the following parameters:
   - APM_ENDPOINT: *Information collected in the pre-requisites*.
   - APM_PVDATAKEY: *Information collected in the pre-requisites*.
-  - APM_AGENT_URL: [🔗 copie este link](https://objectstorage.us-ashburn-1.oraclecloud.com/p/oMebVKw5USHnxjbrBWM9mKNYN-8MED6LKreiZ8fl_TgrtesUJ5PYI7hfqDngZRgr/n/id3kyspkytmr/b/bucket-devft-apm/o/apm-java-agent-installer-1.8.3326.jar)
+  - APM_AGENT_URL: [🔗 copie este link](https://objectstorage.us-sanjose-1.oraclecloud.com/n/axfvmuge5kep/b/workshop_bucket/o/apm-java-agent-installer-1.11.1.4.jar)
 
   **WARNING** - When entering the name, value and description, click on the "+" sign so that the information is saved.
   
@@ -285,7 +285,7 @@ In this step, you will build a development treadmill, with the **OCI DevOps** se
 
  12. In the **Parameters** Tab, set the following parameter:
  
- - REGISTRY_REGION: `<código-de-região>`.ocir.io  
+ - REGISTRY_REGION: `<Region-Code>`.ocir.io  
           
 ![](./Images/049-LAB4.png)
 
