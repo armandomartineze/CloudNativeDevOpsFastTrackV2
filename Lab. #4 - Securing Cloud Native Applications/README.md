@@ -7,8 +7,8 @@ In this step, you will secure your Cloud Native Apps using the Web Application F
 
 **You'll learn the entire step-by-step of this implementation.
  - [Pre Reqs](#PreReqs)
- - [Step 1: Create de WAF](#Passo1)
- - [Step 1.2: Configure de WAF policies](#Passo2)
+ - [Step 1: Create the WAF policiy](#Passo1)
+ - [Step 1.2: Configure the WAF policies](#Passo2)
  - [Step 2: Test the Country/Region policy](#Passo3)
  - [Step 3: Test the injection of a script ](#Passo4)
 
@@ -20,6 +20,10 @@ In this step, you will secure your Cloud Native Apps using the Web Application F
 
  2. Run the labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) and [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
  3. Get the Front-End Load Balancer name. In the 🍔 hamburger menu, go to: **Networking** → **Load Balnacer**. Save the name of the Load Balancer associated with the Front-End of [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
+ 4. Click in the load balancer for the Front-end to access its detail page.
+ 5. Change the listener of the load Balancer to HTTP Protocol. This will allow the WAF to connect properly with the load balancer. In the Load Balancer page, click in the **Listeners** link
+ 6. Click in the 3 dots button and click on **Edit**
+ 7. In the **Edit listener** change de Protocol to **HTTP** and click **Save changes**. This will take 1-2 minutes to make the change to the listener. Once the change is apply, continue with the Lab.
  
  That's it! We've fulfilled all the prerequisites for the lab!
  
