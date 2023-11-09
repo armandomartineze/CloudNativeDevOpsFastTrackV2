@@ -8,7 +8,6 @@ In this step, you will secure your Cloud Native Apps using the Web Application F
 **You'll learn the entire step-by-step of this implementation.
  - [Pre Reqs](#PreReqs)
  - [Step 1: Create the WAF policiy](#Passo1)
- - [Step 1.2: Configure the WAF policies](#Passo2)
  - [Step 2: Test the Country/Region policy](#Passo3)
  - [Step 3: Test the injection of a script ](#Passo4)
 
@@ -20,78 +19,62 @@ In this step, you will secure your Cloud Native Apps using the Web Application F
 
  2. Run the labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) and [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
  3. Get the Front-End Load Balancer name. In the 🍔 hamburger menu, go to: **Networking** → **Load Balnacer**. Save the name of the Load Balancer associated with the Front-End of [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
- 4. Click in the load balancer for the Front-end to access its detail page.
- 5. Change the listener of the load Balancer to HTTP Protocol. This will allow the WAF to connect properly with the load balancer. In the Load Balancer page, click in the **Listeners** link
- 6. Click in the 3 dots button and click on **Edit**
- 7. In the **Edit listener** change de Protocol to **HTTP** and click **Save changes**. This will take 1-2 minutes to make the change to the listener. Once the change is apply, continue with the Lab.
- 
+    ![](./images/LB1.png)
+
+ 5. Click in the load balancer for the Front-end to access its detail page.
+ ![](./images/WAF.png)
+ 7. Change the listener of the load Balancer to HTTP Protocol. This will allow the WAF to connect properly with the load balancer. In the Load Balancer page, click in the **Listeners** link
+    ![](./images/LB3.png)
+ 9. Click in the 3 dots button and click on **Edit**
+     ![](./images/LB4.png)
+ 11. In the **Edit listener** change de Protocol to **HTTP** and click **Save changes**. This will take 1-2 minutes to make the change to the listener. Once the change is apply, continue with the Lab.
+ ![](./images/LB5.png)
  That's it! We've fulfilled all the prerequisites for the lab!
  
  - - -
 
  ## <a name="Passo1"></a> Step 1: Create de WAF
 
- 1. In the 🍔 hamburger menu, go to: **Identity and security** → **DevOps** → **Projects**.
+ 1. In the 🍔 hamburger menu, go to: **Identity & Security** → **Web Application Firewall**.
     
- ![](./Images/013-LAB4.png)
+ ![](./images/WAF.png)
 
+ 2. In the Policies page click in the **Create WAF policy** button:
+ ![](./images/WAF2.png)
+ 3.  In the **Basic information** section write *FTWAF* as the **Name** and select the compartment, then click **Next**
+    ![](./images/WAF3.png)
+ 5.  In the **Access control** section, enable access control and click in the **Add access rule** button.
 
- 3. Clone the project repository.
-
- ```shell
- git clone https://github.com/CeInnovationTeam/BackendFTDev.git
- ```
-
- 3. In the 🍔 hamburger menu, go to: **Developer Services** → **DevOps** → **Projects**.
-  
- ![](./Images/014-LAB4.png)
-
- 4. Access the listed project (created when provisioning the Resource Manager 😄).
-  
- ![](./Images/015-LAB4.png)
-
- 5. On the project page, click on **Create repository**.
-
- ![](./Images/016-LAB4.png)
-
- 6. Fill in the form as follows:
-
-   - **Name:** ftRepo
-   - **Description:** (Define any description).
-   - **Default branch:** main
-
- ![](./Images/017-LAB4.png)
-
- 7. On the newly created repository page, click on **HTTPS** and:
-
-- [1] Copy into notepad the information about the user to be used to work with git (**Git User**).
-- 2] Copy the git clone command and run it in the Cloud Shell.
-
- ![](./Images/018-LAB4.png)
-
- 8. In the Cloud Shell, when running the command, enter the newly copied **Git User** and your **Auth Token** as the password.
-
- 9. At this point, the Cloud Shell should have two new directories:
- - BackendFTDev
- - ftRepo
+ ![](./images/WAF15.png)
  
- ![](./Images/019-LAB4.png)
+ 6. In the **Add access rule** page, write the name *countryRule*, select *Country/Region* in the *Condition type* field, select *Not in list* in the *Operator* field and *Colombia* and *Mexico* in the *Countries* field. This will create a rule that only allows access from these two countries.
+ ![](./images/WAF4.png)
+ 7. In the **Rule action** section select *Pre-configured 401 Response Code Action* in the *Action name* field. This will return an error when the rule is satisfied. Then click in **Add access rule**.
+ ![](./images/WAF5.png) 
+ 9. Then click on the **Next** button
+![](./images/WAF6.png)
+ 10. In the **Rate limiting** section just click **Next**
+ 11. In the **Protections** section, enable the configure protection rules and click in **Add request protection rule**
+ ![](./images/WAF7.png)
+ 13. In the **Add protection rule page** write *owasprule* as the name and in the **Rule action** section select *Pre-configured 401 Response Code Action*. This will return an error when the rule is satisfied.
+![](./images/WAF8.png)
 
- 10. Run the following commands to copy the contents of the **BackendFTDev** repository to the **ftRepo** repository.
+ 14. In the **Protection capabilities** section click on **Choose protection capabilities**
+![](./images/WAF9.png)
+ 15. In the **Choose protection capabilities** page in the *Filter by tags* select *OWASP-A10-2021* and leave the *Recommended* option added. Then click in the check box below to include all the protection capabilities. Then click in **Choose protection capabilities**. This will add all the protection capabilities needed to catch a variety of malicious traffic types, such as *XSS attacks* and *SQL Injection**. These capabilities run when the specified request and response conditions are met.
 
- ```shell
- git config --global user.email "<your-email>"
- git config --global user.name "<your-username>"
- cp -r BackendFTDev/* ftRepo/
- cd ftRepo
- git add -A
- git commit -m "Start of project"
- git push origin main
- ```
+  ![](./images/WAF10.png)
+ 17. Then click in **Add request protection rule** and click on **Next**
+ ![](./images/WAF11.png)
+ 18. In the **Select enforcement point** select the load balancer for the Front-end. Choose the name of the load balancer that we got in the PrePeqs of the lab. Then click **Next**
+ ![](./images/WAF12.png)
+ 19. Review the information and click in **Create WAF policy**
+ ![](./images/WAF13.png)
+ 20. The WAF policy should look similar to this
+ ![](./images/WAF14.png)
 
-*Ao final do último comando o **Usuário git** e a senha (**Auth Token**) poderão ser solicitados novamente*.
 
- ## <a name="Passo2"></a> Passo 2: Criar e configurar processo de Build (CI)
+ ## <a name="Passo2"></a> Step 2: Test the Country/Region policy
 
  1. Retorne à página inicial do projeto DevOps.
  2. Clique em **Create build pipeline**. 
