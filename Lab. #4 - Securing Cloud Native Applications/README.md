@@ -1,53 +1,38 @@
-# Lab. #4 - Automating Deployment
+# Lab. #4 - Securing Cloud Native Applications
 
-In this step, you will build a development treadmill, with the **OCI DevOps** service, which will automate the delivery of a containerized application to a Kubernetes cluster!
+In this step, you will secure your Cloud Native Apps using the Web Application Firewall! This service allows us to protect our application from from malicious and unwanted internet traffic!
 
-- 🌀 [Official OCI DevOps page](https://www.oracle.com/br/devops/devops-service/)
-- 🧾 [OCI DevOps documentation](https://docs.oracle.com/pt-br/iaas/Content/devops/using/home.htm)
+- 🌀 [Official OCI WAF page](https://www.oracle.com/security/cloud-security/web-application-firewall/)
+- 🧾 [OCI WAF documentation](https://docs.oracle.com/en-us/iaas/Content/WAF/Concepts/overview.htm)
 
 **You'll learn the entire step-by-step of this implementation.
- - [Pre Reqs: Collecting information relevant to the process](#PreReqs)
- - [Step 1: Clone repository and move content to DevOps project repository](#Passo1)
- - [Passo 2: Criar e configurar processo de Build (CI)](#Passo2)
- - [Passo 3: Criar e configurar entrega de artefatos (CI)](#Passo3)
- - [Passo 4: Criar e configurar entrega de aplicação a cluster kubernetes (CD)](#Passo4)
- - [Passo 5: Configurar gatilho do fluxo e conectar pipelines de CI/CD](#Passo5)
- - [Passo 6: Execução e testes](#Passo6)
+ - [Pre Reqs](#PreReqs)
+ - [Step 1: Create de WAF](#Passo1)
+ - [Step 1.2: Configure de WAF policies](#Passo2)
+ - [Step 2: Test the Country/Region policy](#Passo3)
+ - [Step 3: Test the injection of a script ](#Passo4)
 
  - - -
 
- ## <a name="PreReqs"></a> Pre Reqs: Collecting information relevant to the process
+ ## <a name="PreReqs"></a> Pre Reqs
 
  1. [Log in](https://www.oracle.com/cloud/sign-in.html) to your OCI account
 
  2. Run the labs [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) and [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201).
-
- 3. Go to the 🍔 hamburger menu: **Observability & Management** → **Application Performance** → **Administration**.
-
- ![](./Images/005-LAB4.png)
-
- 4. In the bottom left-hand corner, under **Scope**,validate **Comparment** created in [Lab. #1](../Lab.%20%231%20-%20Resource%20Provisioning) is selected.
-
- 5. Select the APM domain listed.
-   
- ![](./Images/007-LAB4.png)
-
- 6. Copy the domain's private key into a notebook.
-
- ![](./Images/008_1-LAB4.PNG)
+ 3. Get the Front-End Load Balancer name. In the 🍔 hamburger menu, go to: **Networking** → **Load Balnacer**. Save the name of the Load Balancer associated with the Front-End of [Lab #2](../Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
  
  That's it! We've fulfilled all the prerequisites for the lab!
  
  - - -
 
- ## <a name="Passo1"></a> Step 1: Clone repository and move content to DevOps project repository
+ ## <a name="Passo1"></a> Step 1: Create de WAF
 
- 1. Acesse o **Cloud Shell**, clicando no ícone como na imagem abaixo.
- 
+ 1. In the 🍔 hamburger menu, go to: **Identity and security** → **DevOps** → **Projects**.
+    
  ![](./Images/013-LAB4.png)
 
 
- 2. Clone the project repository.
+ 3. Clone the project repository.
 
  ```shell
  git clone https://github.com/CeInnovationTeam/BackendFTDev.git
