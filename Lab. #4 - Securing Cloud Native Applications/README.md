@@ -105,7 +105,7 @@ http://152.70.112.232/?a=<script>alert('hacker');<script>
 ![](./images/country.png)
 
 
- 2. To start the *windscribe* tool just select the country by clicking in the world logo and selecting for example *Atlanta Mountin* in the *US Central*.  
+ 2. To start the *windscribe* tool just select the country by clicking in the world logo and selecting for example *Atlanta Mountain* in the *US Central*.  
 
 ![](./images/country4.png)
 ![](./images/country5.png)
