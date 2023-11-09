@@ -107,18 +107,18 @@ http://152.70.112.232/?a=<script>alert('hacker');<script>
 
  2. To start the *windscribe* tool just select the country by clicking in the world logo and selecting for example *Atlanta Mountin* in the *US Central*.  
 
-![](./Images/country4.png)
-![](./Images/country5.png)
+![](./images/country4.png)
+![](./images/country5.png)
 
 3. Then click in the *ON* logo to start the tool
-![](./Images/country6.png)
+![](./images/country6.png)
 
 4. Once started you can check your IP location by browsing to this website: **https://www.iplocation.net/**. Here you can check that your location has change
-![](./Images/country2.png)
+![](./images/country2.png)
 
 5. Then you can go to the public IP of the Front-End app and you will see that the WAF will block this request from *Atlanta*. Sometimes you have to refresh the browser a couple of times so the WAF identifies the attempt
 
-![](./Images/country3.png)
+![](./images/country3.png)
 
 
 ### 👏🏻 Excelente!!! Protegiste tu App! Ahora puedes explorar más capacidades de este servicio de WAF en OCI! 🚀
