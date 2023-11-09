@@ -19,20 +19,20 @@ For this task we will use the following resources:
 ![](./IMG/004-LAB3.PNG)
 
 4. Fill in the rule form as follows:
-- Display Name: < Define a rule name >
-- Description: < Define a description for the rule >
-- Rule Conditions:**
-- Condition: "Event Type"
-- Service Name: "Object Storage"
-- Event Type: "Object Create"
+- **Display Name:** < Define a rule name >
+- **Description:** < Define a description for the rule >
+- **Rule Conditions:**
+- **Condition:** "Event Type"
+- **Service Name:** "Object Storage"
+- **Event Type:** "Object Create"
 
 ![](./IMG/005-LAB3.PNG)
 
-- Actions:**
-- Action Type: "Functions"
-- Function compartment: < Select the compartment of the function created in the previous lab>
-- Function Application: < Select the function application created in the previous lab>
-- Function: "final-workshop"
+- **Actions:**
+- **Action Type:** "Functions"
+- **Function compartment:** < Select the compartment of the function created in the previous lab>
+- **Function Application:** < Select the function application created in the previous lab>
+- **Function:** "final-workshop"
 
 ![](./IMG/006-LAB3.PNG)
 
