@@ -37,17 +37,18 @@ Hello, in this lab you will learn how to record, monitor and analyze the logs of
 ![](https://github.com/ladan19/images-lp/blob/main/photo-2.png?raw=true)
 6. In the **Logging** menu on the left, click on **Logs** and then on the button on the right **Enable service log**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-3.png?raw=true)
-7. Under **Service** choose the item *Virtual Cloud Network* and under **Resource** select the public subnet created earlier. In **Log Category** select the *Flow Logs* option and in **Log Name** enter the name *Flowlogs-VCN*. Then in Log Location click on **Show Advanced Options** and click on **Create New Group** to create a new group:
+7. Under **Service** choose the item *Virtual Cloud Network* and under **Resource** select the public subnet created earlier. In **Log Category** select the *Flow Logs* option and in **Log Name** enter the name *Flowlogs-VCN*. Select the *Capture Filter* created earlier. Then in Log Location click on **Show Advanced Options** and click on **Create New Group** to create a new group:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-4.png?raw=true)
-8. On the log group creation screen, in **Name** enter the group name *LogGroupFlow* and click on the **Create** button:
+![](images/CP1.png)
+9. On the log group creation screen, in **Name** enter the group name *LogGroupFlow* and click on the **Create** button:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-5.png?raw=true)
-9. Leave *LogGroupFlow* selected as **Log Group** and click on the **Enable Log** button to enable the configuration:
+10. Leave *LogGroupFlow* selected as **Log Group** and click on the **Enable Log** button to enable the configuration:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-6.png?raw=true)
-10. After activation (2-3 min), log collection begins (5-6 min). To view **Logging**, click on **Logs** in the left-hand menu and then click on the Log Name we just created **Flowlogs-VCN**:
+11. After activation (2-3 min), log collection begins (5-6 min). To view **Logging**, click on **Logs** in the left-hand menu and then click on the Log Name we just created **Flowlogs-VCN**:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-7.png?raw=true)
-11. You will see the log collection dashboard for the chosen VCN. Click on **Explore with Log Search** on the right to:
+12. You will see the log collection dashboard for the chosen VCN. Click on **Explore with Log Search** on the right to:
 ![](https://github.com/ladan19/images-lp/blob/main/photo-8.png?raw=true)
-12. Done! From now on you can modify the searches to filter out the log you want.
+13. Done! From now on you can modify the searches to filter out the log you want.
 
 > Tip: Change the visualization to **Visualize** and have fun!
 
