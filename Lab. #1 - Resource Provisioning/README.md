@@ -80,7 +80,7 @@ The first step is to download the file (zip) from the github repository.
 
 ![](./images/IMG02.PNG)
 
-7. Before proceeding, remember to select version "v1.25.4" in the option **Kubernetes Version**.
+7. Before proceeding, remember to select version "Latest" in the option **Kubernetes Version**.
 
 ![](./images/IMG_OKE.png)
 
