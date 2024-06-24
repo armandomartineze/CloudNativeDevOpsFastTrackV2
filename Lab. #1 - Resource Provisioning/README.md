@@ -86,9 +86,11 @@ The first step is to download the file (zip) from the github repository.
 
 8. Click on **Next**.
 
-9. Once our stack has been created, click on **Apply** and confirm the action.
+9. Once our stack has been created, click on **Apply**, click on **Show Advanced options**, make sure the opction **Upgrade provider versions** is selected and confirm the action.
 
 ![](./images/IMG07.PNG)
+
+![](./images/IMG_RMApplyJob01.PNG)
 
 10. The provisioning of resources should take around 25 minutes.
 
