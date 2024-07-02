@@ -81,6 +81,14 @@ Click on the domain created by Resource Manager in the previous lab, and copy th
 
 You can search for your region's code [here](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryprerequisites.htm#regional-availability)
 
+## Cloud Shell setup
+
+Open **Cloud Shell**, click in Actions and select **Architecture**, select **X86_64** and click Confirm:
+
+![cloudshell1](images/cloudshell1.png)
+
+![cloudshell2](images/cloudshell2.png)
+
 ## Docker Login
 
 We'll need Docker to build the application containers and push them to the OCIR. Before the push, we need to log in to the OCIR via dorcker-CLI.
