@@ -4,7 +4,7 @@ In this repository you will find all the material for the development of the Fas
 Labs for the Fast Track:
 
 - [Lab. #1 - Resource Provisioning](/Lab.%20%231%20-%20Resource%20Provisioning)
-- [Lab. #2 - Developing Cloud Native Applications - Parte 1](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
+- [Lab. #2 - Developing Cloud Native Applications](Lab.%20%232%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%201)
 - [Lab. #3 - Automating Deployment](/Lab.%20%233%20-%20Automating%20Deployment)
 
 Bonus Labs:
