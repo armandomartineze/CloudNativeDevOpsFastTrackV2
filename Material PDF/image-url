@@ -1,3 +1,0 @@
-IMAGE: us-phoenix-1.ocir.io/axlblnhgo70o/ftdeveloper/back:latest
-kubectl delete secret ocisecret
-kubectl create secret docker-registry ocisecret --docker-server=us-phoenix-1.ocir.io --docker-username='axlblnhgo70o/Default/armando.martinez@oracle.com' --docker-password='HUALBQh0sCdG2bCT{D8w' --docker-email='armando.martinez@oracle.com'
