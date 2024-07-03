@@ -1,0 +1,11 @@
+tenancyname tenant_name
+tenancyocid ocid1.tenancy.oc1..aa....rbeqee
+username Default/usermail@domain.com
+userocid ocid1.user.oc1..aaaaa...cc7q2ptgm
+authtoken BQh0.....w
+namespace ax...89o
+apmendpoint https://aaaadecgbb.....oci.oraclecloud.com
+regioncode us-phoenix-1
+apmpublickey HZXC....4SEJBQT
+apmprivatekey A4Q....5FTVZUMQ
+okeocid ocid1.cluster.oc1.phx.aaaa.....miucbktamqwolq
