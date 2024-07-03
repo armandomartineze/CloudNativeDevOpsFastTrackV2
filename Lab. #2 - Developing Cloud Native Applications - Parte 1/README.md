@@ -1,4 +1,4 @@
-# Lab 2 - Developing Cloud Native Applications - Parte 1
+# Lab 2 - Developing Cloud Native Applications
 
 Laboratory to show in practice how developer tools work in OCI.
 
