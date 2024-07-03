@@ -1,4 +1,4 @@
-# Lab. #5 - Automating Deployment
+# Lab. #3 - Automating Deployment
 
 In this step, you will build a development treadmill, with the **OCI DevOps** service, which will automate the delivery of a containerized application to a Kubernetes cluster!
 
