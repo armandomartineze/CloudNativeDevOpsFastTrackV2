@@ -49,11 +49,11 @@ Region code:
 
 ### Tenancy Namespace
 
-Click on the user icon in the right-hand menu, then click on the name of your tenency.
+Click on the user icon in the right-hand menu, then click on the name of your tenency (** -- ¡¡¡THIS IS NOT THE Tenancy Namespace!!! --**):
 
 ![namespace](images/namespace1.png)
 
-Now copy the namespace into notepad.
+(** -- ¡¡¡THIS IS THE Tenancy Namespace!!! --**):Now copy the namespace into notepad.
 
 ![namespace](images/namespace2.png)
 
