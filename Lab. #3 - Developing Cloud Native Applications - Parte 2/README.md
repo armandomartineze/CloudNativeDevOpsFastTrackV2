@@ -1,4 +1,4 @@
-﻿# Lab. #3 - Developing Cloud Native Applications - Parte 2
+﻿# Bonus Lab. #1 - Developing Cloud Native Applications - Parte 2
 
 This workshop was developed to demonstrate the functionalities of Oracle Cloud Infrastructure in scenarios where it is necessary to orchestrate your infrastructure based on Events. The ultimate goal of this workshop is to create and implement the following event flow:
 
