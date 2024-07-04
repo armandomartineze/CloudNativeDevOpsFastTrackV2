@@ -12,6 +12,3 @@ Bonus Labs:
 - [Bonus Lab. #2 - Securing Cloud Native Applications](/Lab.%20%234%20-%20Securing%20Cloud%20Native%20Applications)
 - [Bonus Lab. #3 - Operating Cloud Native Applications](/Lab.%20%236%20-%20Operating%20Cloud%20Native%20Applications)
 
-¡Take advantage and check out the certifications for Developers in OCI! 💻🚀
-- 🏅 [OCI Developer Associate 2021](https://mylearn.oracle.com/learning-path/become-an-oci-developer-associate/35644/102197)
-- 🏅 [OCI DevOps Professional 2022](https://mylearn.oracle.com/learning-path/become-an-oci-devops-professional/35644/105156)
