@@ -8,7 +8,7 @@ Labs for the Fast Track:
 - [Lab. #3 - Automating Deployment](/Lab.%20%233%20-%20Automating%20Deployment)
 
 Bonus Labs:
-- [Lab. #3 - Developing Cloud Native Applications - Parte 2](/Lab.%20%233%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%202)
+- [Bonus Lab. #1 - Developing Cloud Native Applications - Parte 2](/Lab.%20%233%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%202)
 - [Lab. #4 Securing Cloud Native Applications](/Lab.%20%234%20-%20Securing%20Cloud%20Native%20Applications)
 - [Lab. #6 Operating Cloud Native Applications](/Lab.%20%236%20-%20Operating%20Cloud%20Native%20Applications)
 
