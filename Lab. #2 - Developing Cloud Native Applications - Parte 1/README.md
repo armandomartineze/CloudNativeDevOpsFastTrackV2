@@ -59,13 +59,13 @@ Click on the user icon in the right-hand menu, then click on the name of your te
 
 ### User OCID & Auth Token
 
-Click on the user icon in the right-hand menu, then click on your user name.
+Click on the user icon in the right-hand menu, then click on **My profile**:
 
 ![user](images/user1.png)
 
-Copy the user's OCID and save it in Notepad.
+Copy the user's OCID, username and save it in Notepad:
 
-Then go to Auth Tokens and generate a new token, save the token in notepad.
+Then go to **Auth Tokens** and generate a new token, save the token in notepad.
 
 ![user](images/user2.png)
 
