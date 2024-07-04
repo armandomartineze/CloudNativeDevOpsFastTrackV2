@@ -63,7 +63,7 @@ Click on the user icon in the right-hand menu, then click on **My profile**:
 
 ![user](images/user1.png)
 
-Copy the user's OCID, username and save it in Notepad:
+Copy the **user's OCID**, **username** and save it in Notepad:
 
 Then go to **Auth Tokens** and generate a new token, save the token in notepad.
 
