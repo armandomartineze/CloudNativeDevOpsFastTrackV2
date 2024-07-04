@@ -9,8 +9,8 @@ Labs for the Fast Track:
 
 Bonus Labs:
 - [Bonus Lab. #1 - Developing Cloud Native Applications - Parte 2](/Lab.%20%233%20-%20Developing%20Cloud%20Native%20Applications%20-%20Parte%202)
-- [Lab. #4 Securing Cloud Native Applications](/Lab.%20%234%20-%20Securing%20Cloud%20Native%20Applications)
-- [Lab. #6 Operating Cloud Native Applications](/Lab.%20%236%20-%20Operating%20Cloud%20Native%20Applications)
+- [Bonus Lab. #2 - Securing Cloud Native Applications](/Lab.%20%234%20-%20Securing%20Cloud%20Native%20Applications)
+- [Bonus Lab. #3 - Operating Cloud Native Applications](/Lab.%20%236%20-%20Operating%20Cloud%20Native%20Applications)
 
 ¡Take advantage and check out the certifications for Developers in OCI! 💻🚀
 - 🏅 [OCI Developer Associate 2021](https://mylearn.oracle.com/learning-path/become-an-oci-developer-associate/35644/102197)
